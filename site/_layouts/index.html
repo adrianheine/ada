@@ -1,0 +1,47 @@
+<!doctype html>
+<head>
+  <?meta?>
+  <title><?t $arg.title?></title>
+</head>
+
+<?header?>
+
+<div class="main-container">
+    <div class="main wrapper clearfix">
+
+      <?h $arg.content?>
+
+      <div class=postlist>
+        <?for post site.posts?>
+          <article class=post data-tags="<?for tag post.tags?><?t tag?>,<?/for?>">
+            <h2><a href="<?t post.url?>"><?t post.title?></a></h2>
+            <div class=date><?t dateFormat(post.date, "fullDate")?></div>
+            <div class=tags>
+            <?for tag post.tags?>
+              <span class=tag onclick='filterTag("<?t tag?>")'><?t tag?></span>
+            <?/for?>
+            </div>
+          </article>
+        <?/for?>
+      </div>
+      <aside>
+        <h3>Flattr</h3>
+          <a href="https://flattr.com/submit/auto?user_id=adrianlang&url=[?t site.config.baseUrl ?]&title=°Ad:a&language=en_GB&category=text">
+            <img src="https://api.flattr.com/button/flattr-badge-large.png"
+              alt="Flattr Ad:a" />
+          </a>
+        <h3>Tags</h3>
+        <ul class=taglist>
+          <?do var tags = []; Object.keys(site.tags).forEach(function(k) {tags.push({name: k, posts: site.tags[k]});});
+               tags.sort(function(a, b) { return b.posts.length - a.posts.length; }); ?>
+          <?for tag tags?>
+            <li><span class=tag onclick='filterTag("<?t tag.name?>")'><?t tag.name?></span> (<?t tag.posts.length?>)</li>
+          <?/for?>
+        </ul>
+      </aside>
+    </div>
+</div>
+
+<?footer?>
+
+<script src="/res/filtertag.js"></script>

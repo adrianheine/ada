@@ -1,0 +1,464 @@
+/* ==========================================================================
+   HTML5 Boilerplate styles - h5bp.com (generated via initializr.com)
+   ========================================================================== */
+
+// http://colorschemedesigner.com/#4H51T3xnCw0Gr
+@dark: #422552; // Primary3
+@medium: #79717e; // Primary1
+@light: #D2CDD5; // Primary5
+
+@secondaryA1: #978690;
+@secondaryA2: #71686D;
+@secondaryA3: #622C4A;
+@secondaryA4: #DECDD7;
+@secondaryA5: #DED4D9;
+
+@secondaryB1: #787582;
+@secondaryB2: #5C5A61;
+@secondaryB3: #312654;
+@secondaryB4: #CCC9D7;
+@secondaryB5: #D0CFD7;
+
+@fg: @dark;
+@selection: @medium;
+@codeBg: @light;
+
+@links: @secondaryB3;
+@linksVisited: @secondaryB1;
+
+@tagFg: @secondaryA3;
+@tagBg: @secondaryA4;
+@tagActiveFg: @secondaryA3;
+@tagActiveBg: @secondaryA5;
+@tagSelectedFg: @secondaryA4;
+@tagSelectedBg: @secondaryA3;
+@tagSelectedActiveFg: @secondaryA3;
+@tagSelectedActiveBg: @secondaryA1;
+
+@boxBg: @medium;
+@boxFg: @light;
+@boxBorder: @dark;
+@boxTagFg: @secondaryB3;
+@boxTagBg: @secondaryB4;
+@boxTagActiveFg: @secondaryB1;
+@boxTagActiveBg: @secondaryB5;
+@boxTagSelectedFg: @secondaryB4;
+@boxTagSelectedBg: @secondaryB3;
+@boxTagSelectedActiveFg: @secondaryB5;
+@boxTagSelectedActiveBg: @secondaryB2;
+
+@cmKeyword: @secondaryA3;
+@cmVariable: @secondaryB3;
+
+@import "normalize";
+
+html,
+button,
+input,
+select,
+textarea {
+    color: @fg;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+::selection, ::-moz-selection {
+    background: @selection;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+img {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ===== Initializr Styles ==================================================
+   Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
+   ========================================================================== */
+
+body {
+    font: 16px/26px Helvetica, Helvetica Neue, Arial;
+}
+
+.wrapper {
+    width: 90%;
+    margin: 0 5%;
+}
+
+/* ===================
+    ALL: Theme
+   =================== */
+
+@bigBorder: 1em solid @boxBorder;
+
+.header-container {
+    border-bottom: @bigBorder;
+}
+
+.footer-container,
+.main aside {
+    border-top: @bigBorder;
+}
+
+.header-container,
+.footer-container,
+.main aside {
+    background: @boxBg;
+
+    a, a:visited, a:hover, a:focus {
+      color: @boxFg;
+    }
+
+    .title a, a:visited, a:hover, a:focus {
+      text-decoration: none;
+    }
+}
+
+.title {
+  margin: 0;
+  font-size: 4em;
+  position: absolute;
+  right: 0.3em;
+  bottom: 0.3em;
+}
+
+a {
+  color: @links;
+}
+
+a:hover, a:focus, a:visited {
+  color: @linksVisited;
+}
+
+h1, h2 {
+  a {
+    text-decoration: none;
+  }
+
+  a:hover, a:focus {
+    text-decoration: underline;
+  }
+}
+
+.main {
+    padding: 30px 0;
+}
+
+.main h1 {
+    font-size: 2em;
+}
+
+.main aside {
+    color: @boxFg;
+    padding: 0px 5% 10px;
+}
+
+.footer-container footer {
+    color: @boxFg;
+    padding: 20px 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+header {
+  background-image: url(/res/header.svg);
+  height: 150px;
+  background-repeat: no-repeat;
+  background-position: 15% 5px;
+  position: relative;
+}
+
+
+.tag {
+  cursor: pointer;
+  color: @tagFg;
+  background: @tagBg;
+  padding: 0.2em;
+  border-radius: 0.4em;
+
+  &:hover, &:focus {
+    color: @tagActiveFg;
+    background: @tagActiveBg;
+  }
+
+  &.selected {
+    background: @tagSelectedBg;
+    color: @tagSelectedFg;
+
+    &:hover, &:focus {
+      background: @tagSelectedActiveBg;
+      color: @tagSelectedActiveFg;
+    }
+
+    &:visited {
+      color: @tagSelectedFg;
+    }
+  }
+
+  &:visited {
+    color: @tagFg;
+  }
+}
+
+aside .tag {
+  color: @boxTagFg;
+  background-color: @boxTagBg;
+
+  &:hover, &:focus {
+    color: @boxTagActiveFg;
+    background: @boxTagActiveBg;
+  }
+
+  &.selected {
+    background: @boxTagSelectedBg;
+    color: @boxTagSelectedFg;
+
+    &:hover, &:focus {
+      background: @boxTagSelectedActiveBg;
+      color: @boxTagSelectedActiveFg;
+    }
+  }
+}
+
+.taglist, .taglist li {
+  padding: 1px 0;
+  margin: 0;
+  list-style: none;
+}
+ul.taglist li:before { content: ""; }
+
+.postlist article {
+  margin-bottom: 2em;
+
+  h2 {
+    margin: 0.2em 0;
+  }
+
+  .date, .tags {
+    font-size: 0.9em;
+  }
+}
+
+pre, code {
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+  background-color: @codeBg;
+  padding: 0.1em 0.2em;
+}
+
+pre {
+  overflow-y: auto;
+  white-space: pre;
+  word-wrap: initial;
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 480px) {
+
+}
+
+@media only screen and (min-width: 768px) {
+
+/* ====================
+    WIDE: CSS3 Effects
+   ==================== */
+
+    .header-container,
+    .main aside {
+        -webkit-box-shadow: 0 5px 10px #aaa;
+           -moz-box-shadow: 0 5px 10px #aaa;
+                box-shadow: 0 5px 10px #aaa;
+    }
+
+/* ============
+    WIDE: Main
+   ============ */
+
+    .main .postlist {
+        float: left;
+        width: 60%;
+    }
+
+    .main aside {
+        float: right;
+        width: 25%;
+    }
+}
+
+/* ===============
+    Maximal Width
+   =============== */
+
+.wrapper {
+    max-width: 65em;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+@import "codemirror.less";

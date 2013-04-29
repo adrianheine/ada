@@ -1,0 +1,29 @@
+<!doctype html>
+<head>
+  <?meta?>
+  <title><?t $arg.title?></title>
+</head>
+
+<?header?>
+
+<div class="main-container">
+    <div class="main wrapper clearfix">
+
+
+    <h1><a href="<?t $arg.url?>"><?t $arg.title?></a></h1>
+    <div class=undertitle>
+      <span class=date><?t dateFormat($arg.date, "fullDate")?></span>
+      <?for tag $arg.tags?>
+         <a class=tag href="./#<?t tag?>"><?t tag?></a>
+      <?/for?>
+      <a href="https://flattr.com/submit/auto?user_id=adrianlang&url=<?t site.config.baseUrl + '/' + $arg.url?>&title=<?t $arg.title?>&description=&language=en_GB&tags=<?t $arg.tags.join(',') ?>&category=text">
+
+      <img src="https://api.flattr.com/button/flattr-badge-large.png"l
+        alt="Flattr <?t $arg.title ?>" />
+      </a>
+    </div>
+
+    <?h $arg.content?>
+  </div>
+</div>
+<?footer?>
