@@ -6,6 +6,7 @@ tags:
 - Etherpad lite
 - Node.js
 - Security
+id: https://ada.adrianlang.de/etherpad-lite-directory-traversal
 ---
 
 [Etherpad lite](https://github.com/pita/etherpad-lite) is a great, node.js-based Etherpad clone. Unfortunately, the code base is young and thus the bugs are fresh and evil.

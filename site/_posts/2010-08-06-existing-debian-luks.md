@@ -2,6 +2,7 @@
 layout: post
 title: Encrypt an existing Debian GNU/Linux installation with LUKS
 tags: Debian Encryption GRUB LUKS LVM
+id: https://ada.adrianlang.de/existing-debian-luks
 ---
 
 In the following text I‘ll provide an up-to-date description of how to setup a completely encrypted Debian, using the unstable Debian distribution from August 2010.

@@ -2,6 +2,7 @@
 layout: post
 title: Why federation needs a browser-wide user resource registry
 tags: HTTP Federation Session AutoCompletion AutoFill Cookie Facebook Greasemonkey HTML IFrame Like OpenID Diaspora globalStorage jData localStorage StatusNet
+id: https://ada.adrianlang.de/federation-user-resources
 ---
 
 While sketching out a concept for a certain federated service, I stumbled across a technical problem which badly hurts federated services in comparison to centralized services. I’m gonna explain the problem using the example of (Facebook’s) Like button and show some possible solutions.

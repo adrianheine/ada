@@ -2,6 +2,7 @@
 layout: post
 title: The charset attribute of script elements
 tags: HTML script charset DokuWiki
+id: https://ada.adrianlang.de/html-script-charset
 ---
 
 While setting up an older version of [this site](/) I saw a [HTML 5 validator](http://validator.w3.org) warning about »Required attributes missing on element script.« The provided source code snippet showed a part of a typical inline JavaScript definition as written by DokuWiki:

@@ -1,8 +1,9 @@
 postLink: ${name}
 title: Ad:a
 author:
-  name: Adrian Lang
+  name: Adrian Heine
   uri: https://adrianlang.de/id
+baseUrl: https://ada.adrianheine.de
 # Since this is used for the feed id, which should never change, you should
 # not change this either
-baseUrl: https://ada.adrianlang.de
+atomIdBase: https://ada.adrianlang.de

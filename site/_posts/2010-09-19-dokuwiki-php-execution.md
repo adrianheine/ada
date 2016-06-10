@@ -2,6 +2,7 @@
 layout: post
 title: PHP execution vulnerability in DokuWiki
 tags: Apache PHP Security .htaccess DokuWiki MultiViews mod_mime
+id: https://ada.adrianlang.de/dokuwiki-php-execution
 ---
 Some days ago, a new security problem in DokuWiki [got reported](http://bugs.dokuwiki.org/index.php?do=details&task_id=2020). It allows – assuming certain web server configurations – PHP (This probably applies to other languages interpreted by the web server as well) file execution for users permitted to create pages (Under some circumstances I’ll describe, even the right to edit suffices). This is quite a serious issue, but we are not able to fix it in any sane way apart from checking the server configuration and warning users. I’ll describe the problem, briefly discuss some potential solutions in DokuWiki and why we do not follow them and finally show the solutions we propose.
 

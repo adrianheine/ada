@@ -6,6 +6,7 @@ tags:
 - Functional programming
 - JavaScript
 - PHP
+id: https://ada.adrianlang.de/partial-application-js
 ---
 
 Some time ago, I introduced Andi to what he [called](http://www.cosmocode.de/en/blog/gohr/2009-10/15-javascript-fixing-the-closure-scope-in-loops) »Advanced magic«:

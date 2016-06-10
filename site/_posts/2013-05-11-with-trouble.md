@@ -6,6 +6,7 @@ tags:
 - with
 - Scope
 - Hoisting
+id: https://ada.adrianlang.de/with-trouble
 ---
 
 While working on [jsdom](https://github.com/tmpvar/jsdom), I spent several hours debugging an issue related to the `with` statement.
