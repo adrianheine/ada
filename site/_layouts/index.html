@@ -25,11 +25,6 @@
         <?/for?>
       </div>
       <aside>
-        <h3>Flattr</h3>
-          <a href="https://flattr.com/submit/auto?user_id=adrianlang&url=[?t site.config.baseUrl ?]&title=°Ad:a&language=en_GB&category=text">
-            <img src="https://api.flattr.com/button/flattr-badge-large.png"
-              alt="Flattr Ad:a" />
-          </a>
         <h3>Tags</h3>
         <ul class=taglist>
           <?do var tags = []; Object.keys(site.tags).forEach(function(k) {tags.push({name: k, posts: site.tags[k]});});

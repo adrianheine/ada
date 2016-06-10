@@ -16,11 +16,6 @@
       <?for tag $arg.tags?>
          <a class=tag href="./#<?t tag?>"><?t tag?></a>
       <?/for?>
-      <a href="https://flattr.com/submit/auto?user_id=adrianlang&url=<?t site.config.baseUrl + '/' + $arg.url?>&title=<?t $arg.title?>&description=&language=en_GB&tags=<?t $arg.tags.join(',') ?>&category=text">
-
-      <img src="https://api.flattr.com/button/flattr-badge-large.png"l
-        alt="Flattr <?t $arg.title ?>" />
-      </a>
     </div>
 
     <?h $arg.content?>
