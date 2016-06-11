@@ -50,6 +50,8 @@
 @cmKeyword: @secondaryA3;
 @cmVariable: @secondaryB3;
 
+@lineHeight: 1.4;
+
 @import "normalize";
 
 html,
@@ -62,7 +64,7 @@ textarea {
 
 body {
     font-size: 1em;
-    line-height: 1.4;
+    line-height: @lineHeight;
 }
 
 ::selection, ::-moz-selection {
@@ -75,8 +77,11 @@ hr {
     height: 1px;
     border: 0;
     border-top: 1px solid #ccc;
-    margin: 1em 0;
     padding: 0;
+}
+
+p, hr {
+  margin: @lineHeight * 1em 0;
 }
 
 img {
@@ -113,7 +118,7 @@ textarea {
     ALL: Theme
    =================== */
 
-@bigBorder: 1em solid @boxBorder;
+@bigBorder: (@lineHeight * 1em) solid @boxBorder;
 
 .header-container {
     border-bottom: @bigBorder;
@@ -143,7 +148,7 @@ textarea {
   font-size: 4em;
   position: absolute;
   right: 0.3em;
-  bottom: 0.3em;
+  padding: (1em * @lineHeight / 4) 0;
 }
 
 a {
@@ -164,8 +169,18 @@ h1, h2 {
   }
 }
 
+h2 {
+  margin: 0;
+  line-height: 2em * @lineHeight / 1.5;
+}
+
+h3 {
+  font-size: 1em;
+  margin: 1em * @lineHeight 0;
+}
+
 .main {
-    padding: 30px 0;
+    padding: @lineHeight * 1em 0;
 }
 
 .main h1 {
@@ -174,12 +189,16 @@ h1, h2 {
 
 .main aside {
     color: @boxFg;
-    padding: 0px 5% 10px;
+    padding: 1em * @lineHeight;
+
+    h3 {
+        margin: 0;
+    }
 }
 
 .footer-container footer {
     color: @boxFg;
-    padding: 20px 0;
+    padding: 1em * @lineHeight 0;
 }
 
 /* ==========================================================================
@@ -189,9 +208,9 @@ h1, h2 {
 
 header {
   background-image: url(/res/header.svg);
-  height: 150px;
+  height: 6em * @lineHeight;
   background-repeat: no-repeat;
-  background-position: 15% 5px;
+  background-position: 15% bottom;
   position: relative;
 }
 
@@ -200,7 +219,8 @@ header {
   cursor: pointer;
   color: @tagFg;
   background: @tagBg;
-  padding: 0.2em;
+  padding: 0.15em;
+  margin: 0.05em;
   border-radius: 0.4em;
 
   &:hover, &:focus {
@@ -249,28 +269,32 @@ aside .tag {
 }
 
 .taglist, .taglist li {
-  padding: 1px 0;
+  padding: 0;
   margin: 0;
   list-style: none;
 }
+
 ul.taglist li:before { content: ""; }
 
 .postlist article {
-  margin-bottom: 2em;
+  margin-bottom: 1em * @lineHeight;
 
   h2 {
-    margin: 0.2em 0;
+    line-height: @lineHeight / 1.5;
   }
 
   .date, .tags {
     font-size: 0.9em;
-    line-height: 1.4/0.9;
+    line-height: @lineHeight/0.9;
   }
 }
 
 pre, code {
   font-family: Consolas, "Liberation Mono", Courier, monospace;
   background-color: @codeBg;
+}
+
+code {
   padding: 0.1em 0.2em;
 }
 
@@ -278,6 +302,7 @@ pre {
   overflow-y: auto;
   white-space: pre;
   word-wrap: initial;
+  padding: @lineHeight * 0.5em;
 }
 
 /* ==========================================================================
@@ -312,7 +337,7 @@ pre {
 
     .main aside {
         float: right;
-        width: 25%;
+        width: 30%;
     }
 }
 
