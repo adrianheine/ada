@@ -1,4 +1,6 @@
 postLink: ${name}
+postFileName: ${name}.html
+markdownRenderer: ../markdownRenderer
 title: Ad:a
 author:
   name: Adrian Heine

@@ -77,10 +77,10 @@ hr {
     height: 1px;
     border: 0;
     border-top: 1px solid #ccc;
-    padding: 0;
+    margin: -1px 0 @lineHeight * 1em 0;
 }
 
-p, hr {
+p {
   margin: @lineHeight * 1em 0;
 }
 
@@ -185,6 +185,7 @@ h3 {
 
 .main h1 {
     font-size: 2em;
+    margin: 1em * @lineHeight / 2 0 0 0;
 }
 
 .main aside {
@@ -198,7 +199,7 @@ h3 {
 
 .footer-container footer {
     color: @boxFg;
-    padding: 1em * @lineHeight 0;
+    padding-bottom: 1em * @lineHeight;
 }
 
 /* ==========================================================================
@@ -219,9 +220,7 @@ header {
   cursor: pointer;
   color: @tagFg;
   background: @tagBg;
-  padding: 0.15em;
-  margin: 0.05em;
-  border-radius: 0.4em;
+  .boxed();
 
   &:hover, &:focus {
     color: @tagActiveFg;
@@ -289,6 +288,13 @@ ul.taglist li:before { content: ""; }
   }
 }
 
+:hover > .header-anchor {
+    display: inline;
+}
+.header-anchor {
+    display: none;
+}
+
 pre, code {
   font-family: Consolas, "Liberation Mono", Courier, monospace;
   background-color: @codeBg;
@@ -303,6 +309,84 @@ pre {
   white-space: pre;
   word-wrap: initial;
   padding: @lineHeight * 0.5em;
+}
+
+ol, ul {
+  margin: 1.4em 0;
+}
+
+time:hover::after, time:active::after, time:focus::after {
+  content: "That is " attr( datetime );
+  white-space: nowrap;
+  position: absolute;
+  bottom: @lineHeight * 0.5em;
+  left: 20%;
+  z-index: 1;
+  background-color: rgba(255,255,255,0.8);
+  border: @boxBorder 1px solid;
+  .boxed
+}
+time {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  position: relative;
+}
+
+.footnote-ref {
+  vertical-align: top;
+  top: 0;
+  line-height: @lineHeight;
+  a {
+    text-decoration: none;
+    vertical-align: super; /* Chromium 51 needs this */
+  }
+}
+
+// http://csscience.com/css3-tabs Nr. 3
+.toggleable {
+  > .content {
+    background-color: @codeBg;
+    color: @medium;
+    display: none;
+
+    > .hide::after {
+      content: ")";
+    }
+    > .hide::before {
+      content: "← (";
+    }
+  }
+
+  > .show::after {
+    content: ") →";
+  }
+  > .show::before {
+    content: "(";
+  }
+
+  > .show,
+  > .content > .hide {
+    font-size: 0.9em;
+  }
+
+  > :target ~ .content {
+    display: inline;
+  }
+
+  > :target ~ .content ~ .show {
+    display: none;
+  }
+
+  .link-target {
+    display: block;
+    top: 0;
+    left: 0;
+    position: fixed;
+  }
+}
+
+.footnote-item p {
+  margin: 0;
 }
 
 /* ==========================================================================
@@ -410,6 +494,12 @@ pre {
 
 .clearfix {
     *zoom: 1;
+}
+
+.boxed {
+  padding: 0.15em;
+  margin: 0.05em;
+  border-radius: 0.4em;
 }
 
 /* ==========================================================================

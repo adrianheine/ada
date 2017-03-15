@@ -3,8 +3,11 @@
   "version": "0.0.0",
   "description": "Adrian Heine’s blog Ad:a",
   "dependencies": {
-    "less": "~1.3.3",
-    "heckle-blog": "git://github.com/adrianheine/heckle.git#master"
+    "heckle-blog": "git://github.com/marijnh/heckle.git#e240a8881fde2937490b567302231acaeed07e39",
+    "less": "^2.7.2",
+    "markdown-it": "^8.3.1",
+    "markdown-it-anchor": "^4.0.0",
+    "markdown-it-footnote": "^3.0.1"
   },
   "devDependencies": {},
   "repository": {
