@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "Adrian Heine’s blog Ad:a",
   "dependencies": {
-    "heckle-blog": "git://github.com/marijnh/heckle.git#e240a8881fde2937490b567302231acaeed07e39",
+    "heckle-blog": "git://github.com/marijnh/heckle.git#0b3f6b7cef0b1cc13ef66e52a95634dc7d00bf78",
     "less": "^2.7.2",
     "markdown-it": "^8.3.1",
     "markdown-it-anchor": "^4.0.0",
@@ -18,5 +18,6 @@
     "blog"
   ],
   "author": "Adrian Heine <mail@adrianheine.de>",
-  "license": "CC-BY-SA-3.0"
+  "license": "CC-BY-SA-3.0",
+  "scripts": {"install": "cd site && lessc -x _less/main.less > res/main.css && nodejs --use_strict --harmony ../node_modules/.bin/heckle"}
 }
