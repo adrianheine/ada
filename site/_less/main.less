@@ -342,49 +342,6 @@ time {
   }
 }
 
-// http://csscience.com/css3-tabs Nr. 3
-.toggleable {
-  > .content {
-    background-color: @codeBg;
-    color: @medium;
-    display: none;
-
-    > .hide::after {
-      content: ")";
-    }
-    > .hide::before {
-      content: "← (";
-    }
-  }
-
-  > .show::after {
-    content: ") →";
-  }
-  > .show::before {
-    content: "(";
-  }
-
-  > .show,
-  > .content > .hide {
-    font-size: 0.9em;
-  }
-
-  > :target ~ .content {
-    display: inline;
-  }
-
-  > :target ~ .content ~ .show {
-    display: none;
-  }
-
-  .link-target {
-    display: block;
-    top: 0;
-    left: 0;
-    position: fixed;
-  }
-}
-
 .footnote-item p {
   margin: 0;
 }
@@ -574,3 +531,4 @@ time {
 }
 
 @import "codemirror.less";
+@import "toggleable.less";
