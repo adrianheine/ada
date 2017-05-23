@@ -1,7 +1,10 @@
 var markdownIt = require("markdown-it");
 var highlightCode = require("heckle-blog/highlightCode")
 
-let markdown = markdownIt({highlight: highlightCode, langPrefix: 'lang-', html: true});
+let markdown = markdownIt({highlight: highlightCode, langPrefix: 'lang-', html: true,
+  // For the atom feed
+  xhtmlOut: true
+});
 markdown.use(require('markdown-it-footnote'));
 markdown.use(require('markdown-it-anchor'), {
   slugify: function(s) { return s.toLowerCase().replace(/\W/g, '_').replace(/^_+/, '').replace(/_+$/, ''); },
