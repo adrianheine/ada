@@ -46,7 +46,8 @@ markdown.use(function (md) {
     var text = tokens[idx].meta.text;
     var slug = text.toLowerCase().replace(/\W/g, '_');
     return `<a class="hide" href="#hide_${slug}">Hide ${text}</a></span>` +
-           `<a class="show" href="#show_${slug}">Show ${text}</a>`;
+           `<a class="show" href="#show_${slug}">Show ${text}</a>` +
+           `</span>`;
   }
 });
 
