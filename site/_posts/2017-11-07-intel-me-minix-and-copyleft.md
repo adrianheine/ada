@@ -16,7 +16,7 @@ Granted, that was probably a bit much.
 
 But what happened instead made me feel like Rocket Raccoon with Groot in the death button scene:
 
-<p style="text-align: center"><video src="/res/iamgroot.webm" controls playsinline></video></p>
+<p style="text-align: center"><video src="/res/iamgroot.webm" controls="controls" playsinline="playsinline"></video></p>
 
 Andrew concluded his letter by stating his view that »the Berkeley license provides the maximum amount of freedom to potential users«.
 And he even found this event to be reaffirming his view.
