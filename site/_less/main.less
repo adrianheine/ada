@@ -315,7 +315,7 @@ ol, ul {
   margin: 1.4em 0;
 }
 
-time:hover::after, time:active::after, time:focus::after {
+time[datetime]:hover::after, time[datetime]:active::after, time[datetime]:focus::after {
   content: "That is " attr( datetime );
   white-space: nowrap;
   position: absolute;

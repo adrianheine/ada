@@ -71,8 +71,8 @@ $build_environment = {
 SBUILDRC
 
 # Get source
-dget -x http://http.debian.net/debian/pool/main/f/firefox/firefox_57.0-1.dsc
-cd firefox-57.0
+dget -x http://http.debian.net/debian/pool/main/f/firefox/firefox_57.0.1-1.dsc
+cd firefox-57.0.1
 
 # Remove build-dependency on rustc and cargo (we install them manually),
 # downgrade build-dependencies on LLVM
@@ -117,7 +117,7 @@ SBUILD_CONFIG=../sbuild.rc sbuild \
 Afterwards, `$WORKING_DIRECTORY` should contain (among a lot of other files):
 
 ```
-firefox_57.0-1${SUFFIX}1_amd64.deb
+firefox_57.0.1-1${SUFFIX}1_amd64.deb
 libhunspell-1.6-0_1.6.2-1${SUFFIX}1_amd64.deb
 libnspr4_4.16-1${SUFFIX}1_amd64.deb
 libnss3_3.34-1${SUFFIX}1_amd64.deb
@@ -125,3 +125,5 @@ libsqlite3-0_3.21.0-1${SUFFIX}1_amd64.deb
 ```
 
 Now you should be able to install those with `dpkg` on your Debian stable.
+
+**<time>2017-12-02</time>:** Updated to version 57.0.1.
