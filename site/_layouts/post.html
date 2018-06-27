@@ -12,9 +12,9 @@
 
     <h1><a href="<<t $in.url>>"><<t $in.title>></a></h1>
     <div class=undertitle>
-      <span class=date><<t dateFormat($in.date, "fullDate")>></span>
+      <span class=date><<t dateFormat($in.date, "fullDate")>></span> 
       <<for tag $in.tags>>
-         <a class=tag href="./#<<t tag>>"><<t tag>></a>
+         <a class=tag href="./#<<t tag>>"><<t tag>></a> 
       <</for>>
     </div>
 
