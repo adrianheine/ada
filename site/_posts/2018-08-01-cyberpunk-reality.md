@@ -18,7 +18,7 @@ Cameron describes cyberpunk as an unrealistic, comforting fantasy for people who
 I found both articles to be very thought-provoking, leaving me with a pretty bleak view on both cyberpunk and where we are (headed).
 
 From my point of view, current human society is driven not by the goal of enabling and living good lifes, but by excelling in arbitrary metrics like money and power.
-Both are accumulating in mega-corperations and super-rich individuals, but capitalism permeates everything and structures on every level – for example the way people spend their time or the way cities evolve.
+Both are accumulating in mega-corporations and super-rich individuals, but capitalism permeates everything and structures on every level – for example the way people spend their time or the way cities evolve.
 Moreover, there is a considerable tendency to expand market-based exchange into unclaimed territories on physical, social and emotional layers.
 A side-effect of these tendencies is that there is constantly less room (in people's lifes and in cities) for developing and growing alternatives.
 
