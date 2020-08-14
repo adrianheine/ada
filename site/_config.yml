@@ -4,7 +4,7 @@ markdownRenderer: ../markdownRenderer
 title: Ad:a
 author:
   name: Adrian Heine
-  uri: https://adrianlang.de/id
+  uri: https://adrianheine.de/id
 baseUrl: https://ada.adrianheine.de
 # Since this is used for the feed id, which should never change, you should
 # not change this either
